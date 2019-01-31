@@ -163,7 +163,16 @@ check Nvidia's page [here](https://developer.nvidia.com/cuda-gpus).
 
 Currently for the ML-Agents toolkit, only CUDA v9.0 and cuDNN v7.0.5 is supported.
 
-### Install Nvidia CUDA toolkit
+### Install via Anaconda
+Setup a fresh Envoirement like in Step 1. And after that let anaconda install tensorflow-gpu and its dependencys.
+```sh
+conda install -c anaconda tensorflow-gpu 
+```
+Jump to Test Installation.
+
+### Install by Hand
+
+#### Install Nvidia CUDA toolkit
 
 [Download](https://developer.nvidia.com/cuda-toolkit-archive) and install the
 CUDA toolkit 9.0 from Nvidia's archive. The toolkit includes GPU-accelerated
@@ -179,7 +188,7 @@ Run the installer and select the Express option. Note the directory where you
 installed the CUDA toolkit. In this guide, we installed in the directory
 `C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v9.0`
 
-### Install Nvidia cuDNN library
+#### Install Nvidia cuDNN library
 
 [Download](https://developer.nvidia.com/cudnn) and install the cuDNN library
 from Nvidia. cuDNN is a GPU-accelerated library of primitives for deep neural
@@ -220,7 +229,7 @@ directory is located at
        width="500" border="10" />
 </p>
 
-### Set Environment Variables
+#### Set Environment Variables
 
 You will need to add one environment variable and two path variables.
 
@@ -274,7 +283,7 @@ installed. _Please note that case sensitivity matters_.
         width="500" border="10" />
 </p>
 
-### Install TensorFlow GPU
+#### Install TensorFlow GPU
 
 Next, install `tensorflow-gpu` using `pip`. You'll need version 1.7.1. In an
 Anaconda Prompt with the Conda environment ml-agents activated, type in the
@@ -286,6 +295,7 @@ pip uninstall tensorflow
 pip install tensorflow-gpu==1.7.1
 ```
 
+### Test Installation
 Lastly, you should test to see if everything installed properly and that
 TensorFlow can identify your GPU. In the same Anaconda Prompt, type in the
 following command:
